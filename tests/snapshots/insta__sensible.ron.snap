@@ -1,0 +1,10 @@
+---
+source: tests/insta.rs
+expression: ron
+---
+(
+    value: "string",
+    value: inf,
+    value: +NaN,
+)
+

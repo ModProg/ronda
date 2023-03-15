@@ -1,0 +1,8 @@
+---
+source: tests/insta.rs
+expression: ron
+---
+{
+    "": true,
+}
+

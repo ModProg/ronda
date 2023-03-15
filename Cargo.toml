@@ -1,0 +1,36 @@
+[package]
+name = "ronda"
+version = "0.1.0"
+edition = "2021"
+categories = []
+description = ""
+keywords = []
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/ModProg/ronfmt"
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+
+[dependencies]
+clap = { version = "4.1.8", features = ["derive"] }
+derive_more = "0.99.17"
+# ron-edit = "0.1.0"
+ron-edit = {path = "../ron-edit/"}
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
+[dev-dependencies]
+include_dir = "0.7.3"
+insta = { version = "1.28.0", features = ["ron"] }
+ron = "0.8.0"
+serde = { version = "1.0.154", features = ["derive"] }
+
+
+[profile.dev.package.insta]
+opt-level = 3
+
+[profile.dev.package.similar]
+opt-level = 3
